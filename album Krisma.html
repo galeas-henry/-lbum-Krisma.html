@@ -240,5 +240,24 @@
             const commentsContainer = document.getElementById("comments");
 
             if (commentText) {
-                const commentElement = document.createElement("p
+                const commentElement = document.createElement("p");
+                commentElement.textContent = commentText;
+                commentsContainer.appendChild(commentElement);
+                commentInput.value = ""; // Limpiar el campo de texto después de enviar el comentario
+            }
+        }
+
+        // Mostrar u ocultar la contraseña
+        document.getElementById("toggle-password").addEventListener("change", function() {
+            const passwordField = document.getElementById("password");
+            if (this.checked) {
+                passwordField.type = "text"; // Mostrar la contraseña
+            } else {
+                passwordField.type = "password"; // Ocultar la contraseña
+            }
+        });
+    </script>
+</body>
+</html>
+
 
